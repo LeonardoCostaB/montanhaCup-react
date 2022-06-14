@@ -21,3 +21,7 @@ Estou utilizando a gateway do pagseguro, porém quem faz as requisições para a
 Por conter informações pessoais eu construir o mesmo servidor e vou deixar disponível para quem quiser visitar e tbm usá-lo
 
 <a href="#">acessar repositório</a>
+
+--- deploy front-end
+
+<a href="https://montanha-cup-react.vercel.app/" target="_blank">acessar deploy/</a>
