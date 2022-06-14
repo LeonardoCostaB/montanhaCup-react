@@ -3,6 +3,9 @@ import { Dialog } from '@headlessui/react'
 
 import './style.scss'
 
+import { CloseButton } from '../closeButton'
+
+
 export function ModalTransaction() {
   const [ isOpenModal, setIsOpenModal ] = useState(false)
   const [ isOpenPaymentType, setIsOpenPaymentType ] = useState('')
@@ -147,7 +150,10 @@ export function ModalTransaction() {
       >
         <div className="modal-wrapper">
           <Dialog.Panel className="flex">
+            <CloseButton isCloseModal={toggleCurrentStateModal}/>
+
             <div className="modal-title">
+
               <Dialog.Title
                 as="h3"
               >

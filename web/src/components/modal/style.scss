@@ -46,6 +46,8 @@
       align-items: center;
       gap: 2rem;
 
+      position: relative;
+
       .modal-title {
         @include display(center);
         flex-direction: column;

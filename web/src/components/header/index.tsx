@@ -3,6 +3,8 @@ import  { useState } from 'react'
 
 import './style.scss'
 
+import { CloseButton } from '../closeButton';
+
 import menuImageUrl from '../../assets/icons/menu.svg'
 
 interface HeaderProps {
@@ -31,59 +33,112 @@ export function Header({ activateLink }: HeaderProps) {
           className="menu-hamburguer"
           onClick={toogleMenuHamburguer}
         />
+
+        { isOpenMenuHamburguer ? (
+          <nav 
+            className="menu-mobile"
+          > 
+            <CloseButton isCloseModal={toogleMenuHamburguer} />
+
+            <ul>
+              <li className="links">
+                <Link 
+                  className={activateLink == 'home' ? 'anchor active' : 'anchor'} 
+                  to="/"
+                >
+                  Home
+                </Link>
+              </li>
+          
+              <li className="links">
+                <Link 
+                  className={activateLink == 'eventos' ? 'anchor active' : 'anchor'} 
+                  to="/eventos"
+                >
+                  eventos
+                </Link>
+              </li>
+          
+              <li className="links">
+                <Link 
+                  className={activateLink == 'inscricoes' ? 'anchor active' : 'anchor'} 
+                  to="/inscricoes"
+                >
+                  inscrições
+                </Link>
+              </li>
+              
+              <li className="links">
+                <Link 
+                  className={activateLink == 'ranking' ? 'anchor active' : 'anchor'} 
+                  to="/ranking"
+                >
+                  ranking
+                </Link>
+              </li>
+          
+              <li className="links">
+                <Link 
+                  className={activateLink == 'galeria' ? 'anchor active' : 'anchor'} 
+                  to="/galeria"
+                >
+                  galeria
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        ) : (
+          <nav>
+            <ul>
+              <li className="links">
+                <Link 
+                  className={activateLink == 'home' ? 'anchor active' : 'anchor'} 
+                  to="/"
+                >
+                  Home
+                </Link>
+              </li>
+          
+              <li className="links">
+                <Link 
+                  className={activateLink == 'eventos' ? 'anchor active' : 'anchor'} 
+                  to="/eventos"
+                >
+                  eventos
+                </Link>
+              </li>
+          
+              <li className="links">
+                <Link 
+                  className={activateLink == 'inscricoes' ? 'anchor active' : 'anchor'} 
+                  to="/inscricoes"
+                >
+                  inscrições
+                </Link>
+              </li>
+              
+              <li className="links">
+                <Link 
+                  className={activateLink == 'ranking' ? 'anchor active' : 'anchor'} 
+                  to="/ranking"
+                >
+                  ranking
+                </Link>
+              </li>
+          
+              <li className="links">
+                <Link 
+                  className={activateLink == 'galeria' ? 'anchor active' : 'anchor'} 
+                  to="/galeria"
+                >
+                  galeria
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        )}
         
-        <nav 
-          className={
-            isOpenMenuHamburguer ? "menu-mobile" : ""
-          }
-        >
-          <ul>
-            <li className="links">
-              <Link 
-                className={activateLink == 'home' ? 'anchor active' : 'anchor'} 
-                to="/"
-              >
-                Home
-              </Link>
-            </li>
-        
-            <li className="links">
-              <Link 
-                className={activateLink == 'eventos' ? 'anchor active' : 'anchor'} 
-                to="/eventos"
-              >
-                eventos
-              </Link>
-            </li>
-        
-            <li className="links">
-              <Link 
-                className={activateLink == 'inscricoes' ? 'anchor active' : 'anchor'} 
-                to="/inscricoes"
-              >
-                inscrições
-              </Link>
-            </li>
-            
-            <li className="links">
-              <Link 
-                className={activateLink == 'ranking' ? 'anchor active' : 'anchor'} 
-                to="/ranking"
-              >
-                ranking
-              </Link>
-            </li>
-        
-            <li className="links">
-              <Link 
-                className={activateLink == 'galeria' ? 'anchor active' : 'anchor'} 
-                to="/galeria"
-              >
-                galeria
-              </Link>
-            </li>
-          </ul>
-        </nav>
+
       </div>
     </header>
   )

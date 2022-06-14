@@ -1,0 +1,23 @@
+@import '../../scss/config.scss';
+
+.close-modal {
+  @include display(center);
+
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+
+  background-color: transparent;
+
+  border-radius: 99.99rem;
+
+  padding: .1rem;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(116, 116, 116, 0.315);
+
+    transition: all 300ms;
+  }
+}
