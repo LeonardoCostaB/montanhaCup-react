@@ -18,6 +18,10 @@ main#Events {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     gap: 2rem;
+
+    @media screen and (max-width: 500px) {
+      gap: 50rem;
+    }
     
     .event-image {
       width: 100%;
