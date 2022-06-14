@@ -9,7 +9,7 @@ export function Footer() {
     <footer>
       <div className="footer-wrapper">
         <div className="networking">
-          <a href="https://www.facebook.com/montanhasportsciclismo" target="_blank">
+          <a href="" target="_blank">
             <img 
               src={facebookImageUrl} 
               alt="ìcone da rede social facebook"
@@ -23,7 +23,7 @@ export function Footer() {
             />
           </a>
           
-          <a href="https://www.youtube.com/user/montanhasports" target="_blank">
+          <a href="" target="_blank">
             <img 
               src={youtubeImageUrl}
               alt="ícone da rede social youtube"
