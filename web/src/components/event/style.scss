@@ -54,6 +54,7 @@
 
     @media screen and (max-width: 360px) {
       gap: .5rem;
+      width: 100%;
     }
 
     .button {
@@ -63,8 +64,12 @@
         width: 30%;
       }
 
-      @media screen and (max-width: 500px) {
-        width: 35%;
+      @media screen and (max-width: 408px) {
+        font-size: 1.4rem;
+      }
+
+      @media screen and (max-width: 360px) {
+        font-size: 1.3rem;
       }
     }
   }
