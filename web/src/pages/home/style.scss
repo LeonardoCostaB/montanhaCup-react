@@ -1,0 +1,408 @@
+@import '../../scss/color.scss';
+@import '../../scss/config.scss';
+
+section#slide {
+  .swiper {
+    .swiper-wrapper {
+      .swiper-button-next, .swiper-button-prev {
+        background-color: $color-hover;
+      }
+
+      .swiper-slide {
+        position: relative;
+        
+        img {
+          width: 100%;
+
+          @media screen and (max-width: 360px) {
+            height: 14rem;
+          }
+        }
+        
+        .information {
+          position: absolute;
+          top: 12rem;
+          right: 40rem;
+      
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+
+          @media screen and (max-width: 500px) {
+            top: 2rem;
+            right: 5rem;
+            width: 53%;
+          }
+      
+          h2 {
+            color: black;
+            opacity: .7;
+      
+            font-size: 3.2rem;
+
+            @media screen and (max-width: 500px) {
+              font-size: 1.8rem;
+            }
+
+            @media screen and (max-width: 425px) {
+              text-align: center;
+            }
+          }
+
+          .button {
+            width: 20rem;
+
+            @media screen and (max-width: 500px) {
+              width: 70%;
+              font-size: 1.2rem;
+              padding: 0.5rem;
+            }
+
+            @media screen and (max-width: 360px) {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section#events {
+  padding-top: 2rem;
+  margin-bottom: 5rem;
+
+  .title-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 2rem;
+
+    @media screen and (max-width: 500px) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: 320px) {
+      h2{
+        font-size: 2rem
+      }
+    }
+  }
+
+  .information-event {
+    width: 50%;
+
+    @media screen and (max-width: 500px) {
+      width: 95%;
+    }
+  }
+}
+
+section#contact {
+  padding-bottom: 5rem;
+  
+  h2 {
+    text-align: center;
+    padding-bottom: 3rem;
+
+    @media screen and (max-width: 320px) {
+      font-size: 2rem
+    }
+  }
+
+  .contact-container {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+
+    width: 80%;
+    margin: auto;
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: none;
+      gap: 2rem;
+
+      width: 95%;
+    }
+
+    .form-contact {
+      display: grid;
+      gap: 2rem;
+
+      background-color: $color-web-header;
+
+      border-radius: .8rem;
+
+      padding: 2rem 1rem;
+
+      position: relative;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: .1rem;
+
+        width: 100%;
+        height: .3rem;
+
+        background-color: $color-hover;
+
+        border-radius: .8rem .8rem 0 0;
+      }
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        bottom: .1rem;
+
+        width: 100%;
+        height: .3rem;
+
+        background-color: $color-hover;
+
+        border-radius: 0 0 .8rem .8rem ;
+      }
+
+      fieldset {
+        width: 95%;
+        margin: auto;
+
+        legend {
+          font-size: 1.8rem;
+    
+          padding-top: 2rem;
+          padding-bottom: 3rem;
+        }
+    
+        form {
+          display: grid;
+          gap: 2rem;
+
+          .customer-wrapper {
+            @include display(flex);
+            gap: 2rem;
+
+            width: 100%;
+
+            @media screen and (max-width: 425px) {
+              flex-wrap: wrap;
+            }
+
+            .input-wrapper {
+              width: 100%;
+            }
+          }
+          
+          input, textarea {
+            padding: 1rem;
+
+            border-radius: .8rem;
+    
+            background-color: $background-input;
+    
+            width: 100%;
+    
+            resize: none;
+
+            font-size: 1.5rem;
+
+            outline-color: $color-hover;
+    
+            &::placeholder {
+              font-size: 1.8rem;
+
+              @media screen and (max-width: 425px) {
+                font-size: 1.5rem;
+              }
+            }
+
+            &:focus {
+              outline-color: $color-hover;
+            }
+          }
+
+          textarea {
+            height: 20rem
+          }
+    
+          .container-button {
+            @include display(center);
+
+            .button {
+              width: 30%;
+
+              &:disabled {
+                opacity: .5;
+
+                cursor: no-drop;
+
+                @media screen and (max-width: 425px) {
+                  width: 45%;
+                }
+
+                &:hover {
+                  background-color: #5377A6;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .line {
+        margin: auto
+      }
+    
+      .whatsapp {
+        @include display(column);
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+    
+        p {
+          font-size: 1.8rem;
+          text-align: center;
+        }
+    
+        a {
+          background-color: #005C4B;
+          width: 45%;
+    
+          padding: 1rem;
+    
+          text-align: center;
+          text-transform: uppercase;
+    
+          border-radius: .8rem;
+
+          @include display(center);
+          gap: 1rem;
+
+          @media screen and (max-width: 425px) {
+            width: 50%;
+          }
+    
+          &:hover {
+            background-color: #00856c;
+
+            transition: all 300ms;
+          }
+        }
+      }
+    }
+
+    .information-contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+
+
+      padding-bottom: 15rem;
+
+      width: 100%;
+      height: 100%;
+      margin: auto;
+
+      background-color: $color-web-header;
+
+      border-radius: .8rem;
+
+      position: relative;
+
+      @media screen and (max-width: 500px) {
+        height: 40rem;
+
+        padding-bottom: 0;
+      }
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: .1rem;
+
+        width: 100%;
+        height: .3rem;
+
+        background-color: $color-hover;
+
+        border-radius: .8rem .8rem 0 0;
+      }
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        bottom: .1rem;
+
+        width: 100%;
+        height: .3rem;
+
+        background-color: $color-hover;
+
+        border-radius: 0 0 .8rem .8rem ;
+      }
+
+      .contact-event {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2rem;
+
+        @media screen and (max-width: 500px) {
+          align-items: center;
+        }
+        
+        address {
+          @include display(flex);
+          gap: 1rem;
+  
+          h5 {
+            font-size: 1.8rem;
+
+            &:hover {
+              color: $color-hover;
+
+              transition: all 300ms;
+            }
+          }
+        }
+      }
+      
+      .networking-information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        .message-customer {
+          h4 {
+            text-align: center;
+          }
+        }
+
+        .our-networking {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+
+          img {
+            width: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

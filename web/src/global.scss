@@ -1,0 +1,109 @@
+@import './scss/color.scss';
+@import './scss/config.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  &::-webkit-scrollbar {
+    width: .7rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-hover-ligth;
+    border-radius: 2.0rem;
+  }
+
+  @media screen and (max-width: 425px) {
+    font-size: 55.5%;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 53.5%;
+  }
+}
+
+body {
+  background-color: $color-web-wash;
+
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.6rem;
+}
+
+a, button, p, h1, h2, h3, h4, h5, h6, legend, label, input, textarea, select {
+  color: $color-font;
+ 
+  text-decoration: none;
+}
+ 
+li {
+  list-style: none;
+}
+
+fieldset {
+  border: none;
+}
+
+input {
+  background-color: $background-input;
+  
+  border: .2rem solid $color-hover-ligth;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+// classes reutilizáveis
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0,);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.button {
+  padding: 1rem;
+          
+  background-color: #5377A6;
+  
+  border-radius: .6rem;
+
+  width: 45%;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  font-weight: 600;
+
+  @include display(center);
+
+  &:hover {
+    background-color: $color-hover;
+
+    transition: all 300ms;
+  }
+}
+
+.line {
+  width: 90%;
+  height: .1rem;
+
+  background-color: $color-hover-ligth;
+}

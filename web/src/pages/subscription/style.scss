@@ -1,0 +1,135 @@
+@import '../../scss/color.scss';
+@import '../../scss/config.scss';
+
+.container-subscription {
+  display: grid;
+  grid-template-columns: 20% 80%;
+
+  width: 90%;
+  height: 52.8rem;
+  margin: auto;
+
+  padding: 5rem 0;
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: none;
+    gap: 5rem;
+
+    height: auto;
+    width: 95%;
+  }
+
+  aside {
+    height: 100%;
+
+    nav { 
+      ul {
+        @media screen and (max-width: 640px) {
+          display: flex;
+          gap: 2rem;
+        }
+
+        .nav-subscription {
+          padding: 2rem 0;
+
+          button {
+            font-size: 2rem;
+            background-color: transparent;
+
+            &:hover, &.active{
+              color: $color-hover;
+              transition: 300ms;
+            }
+
+            @media screen and (max-width: 640px) {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #subscription {
+    section {
+      @include display(center);
+      
+      &#register {
+        height: 100%;
+        
+        .register-container {
+          @include display(center);
+          flex-direction: column;
+          gap: 5rem;
+      
+          height: 72%;
+          width: 60%;
+      
+          margin: auto;
+      
+          background-color: $color-web-header;
+      
+          border-radius: 1rem;
+
+          @media screen and (max-width: 640px) {
+            height: auto;
+            width: 95%;
+
+            padding: 2rem 0;
+
+            gap: 3rem;
+
+            h2 {
+              text-align: center;
+            }
+          }
+      
+          .register {
+            width: 100%;
+      
+            @include display(center);
+            flex-direction: column;
+            gap: 3rem;  
+      
+            h3 {
+              text-align: center;
+            }
+    
+            .button-container {
+              @include display(center);
+              gap: 1.5rem;
+    
+              width: 100%;
+    
+              .button {
+                width: 40%;
+              }
+    
+              a {
+                height: 3.6rem;
+              }
+            }
+          }
+    
+        }
+      }
+      
+      &#next-event {
+        .information-event {
+          width: 60%;
+
+          @media screen and (max-width: 640px) {
+            width: 100%;
+          }
+    
+          .links-event {
+            .button {
+              width: 50%;
+            }
+          }
+        }
+  
+      }
+    }
+  }
+}

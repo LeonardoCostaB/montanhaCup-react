@@ -1,0 +1,39 @@
+@import '../../scss/color.scss';
+@import '../../scss/config.scss';
+
+footer {
+  padding: 3rem;
+  background-color: $color-web-header;
+
+  .footer-wrapper {
+    width: 80%;
+    margin: auto;
+
+    @include display(flex);
+    justify-content: space-between;
+    
+    .networking {
+      @include display(flex);
+      gap: 2rem;
+
+      @media screen and (max-width: 500px) {
+        gap: 1rem;
+        
+        img {
+          width: 70%;
+        }
+      }
+    }
+
+    .developed-by {
+      a {
+        &:hover {
+          color: $color-hover;
+
+          transition: all 300ms;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,17 @@
+@mixin display($val) {
+  @if($val == flex) {
+    display: flex;
+    align-items: center;
+  }
+
+  @else if($val == center) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @else if($val == column) {
+    display: flex;
+    flex-direction: column;
+  }
+}
