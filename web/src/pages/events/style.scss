@@ -13,20 +13,19 @@ main#Events {
     width: 95%;
   }
 
-
   .event-container, .next-event{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     gap: 2rem;
 
-    @media screen and (max-width: 500px) {
-      gap: 50rem;
-    }
-    
     .event-image {
       width: 100%;
       height: 100%;
       border-radius: .7rem;
+
+      @media screen and (max-width: 500px) {
+        height: auto;
+      }
     }
 
     .information-event {
@@ -42,7 +41,6 @@ main#Events {
           gap: .7rem;
         }
       }
-
 
       .links-event {
         .button {
