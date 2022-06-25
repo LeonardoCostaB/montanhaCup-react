@@ -1,13 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { App } from './app'
 
 import './global.scss'
 
-import { Routess } from './routes'
-
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Routess />
+    <App />
   </React.StrictMode>
 )
