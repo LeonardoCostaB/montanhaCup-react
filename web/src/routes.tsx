@@ -10,6 +10,7 @@ export function Router() {
       <Route path="/" element={ <Home /> } />
       <Route path="/eventos" element={ <Event /> } />
       <Route path="/inscricoes" element={ <Subscription /> } />
+      <Route path="*" element={ <Home /> } />
     </Routes>
   )
 }
