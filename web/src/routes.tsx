@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 
 import { Home } from './pages/home'
 import { Event } from './pages/events'
@@ -10,7 +10,7 @@ export function Router() {
       <Route path="/" element={ <Home /> } />
       <Route path="/eventos" element={ <Event /> } />
       <Route path="/inscricoes" element={ <Subscription /> } />
-      <Route path="/*" element={ <Home /> } />
+      <Route path="*" element={ <Navigate to="/" replace /> } />
     </Routes>
   )
 }
